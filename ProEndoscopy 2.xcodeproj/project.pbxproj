@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E8DC9B61C1906F300243E17 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DC9B51C1906F300243E17 /* Item.m */; };
+		8E8DC9B91C1906F400243E17 /* AssetType.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DC9B81C1906F400243E17 /* AssetType.m */; };
 		8EE4ABCA1C18FEB7001FC31B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE4ABC91C18FEB7001FC31B /* main.m */; };
 		8EE4ABCD1C18FEB7001FC31B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE4ABCC1C18FEB7001FC31B /* AppDelegate.m */; };
 		8EE4ABD01C18FEB7001FC31B /* ProEndoscopy_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EE4ABCE1C18FEB7001FC31B /* ProEndoscopy_2.xcdatamodeld */; };
@@ -29,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E8DC9B41C1906F300243E17 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		8E8DC9B51C1906F300243E17 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		8E8DC9B71C1906F400243E17 /* AssetType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetType.h; sourceTree = "<group>"; };
+		8E8DC9B81C1906F400243E17 /* AssetType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetType.m; sourceTree = "<group>"; };
 		8EE4ABC41C18FEB7001FC31B /* ProEndoscopy 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ProEndoscopy 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE4ABC81C18FEB7001FC31B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EE4ABC91C18FEB7001FC31B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,6 +74,10 @@
 		8EE4ABBB1C18FEB7001FC31B = {
 			isa = PBXGroup;
 			children = (
+				8E8DC9B71C1906F400243E17 /* AssetType.h */,
+				8E8DC9B81C1906F400243E17 /* AssetType.m */,
+				8E8DC9B41C1906F300243E17 /* Item.h */,
+				8E8DC9B51C1906F300243E17 /* Item.m */,
 				8EE4ABC61C18FEB7001FC31B /* ProEndoscopy 2 */,
 				8EE4ABE61C18FEB7001FC31B /* ProEndoscopy 2Tests */,
 				8EE4ABC51C18FEB7001FC31B /* Products */,
@@ -227,6 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E8DC9B91C1906F400243E17 /* AssetType.m in Sources */,
+				8E8DC9B61C1906F300243E17 /* Item.m in Sources */,
 				8EE4ABD61C18FEB7001FC31B /* DetailViewController.m in Sources */,
 				8EE4ABD31C18FEB7001FC31B /* MasterViewController.m in Sources */,
 				8EE4ABCD1C18FEB7001FC31B /* AppDelegate.m in Sources */,
@@ -426,6 +438,7 @@
 				8EE4ABEF1C18FEB7001FC31B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EE4ABF01C18FEB7001FC31B /* Build configuration list for PBXNativeTarget "ProEndoscopy 2Tests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +447,7 @@
 				8EE4ABF21C18FEB7001FC31B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
