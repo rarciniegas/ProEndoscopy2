@@ -8,10 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
+@class Event;
+
 @interface DetailViewController : UIViewController
+<UIPickerViewDelegate, UIPickerViewDataSource> {
+    UIPickerView    *singlePicker;
+    NSArray         *pickerData;
+}
 
 @property (strong, nonatomic) id detailItem;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
+@property (nonatomic, strong)Event *item;
+
+@property (weak, nonatomic) IBOutlet UITextField *productTextField;
+@property (weak, nonatomic) IBOutlet UITextField *serialTextField;
+
+@property (nonatomic, retain) NSArray *pickerData;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 
 @end
 
