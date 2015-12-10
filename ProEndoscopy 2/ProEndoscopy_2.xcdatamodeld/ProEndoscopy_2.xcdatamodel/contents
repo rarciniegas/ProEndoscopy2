@@ -5,6 +5,12 @@
         <relationship name="itemAsset" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="itemAsset" inverseEntity="Item" syncable="YES"/>
     </entity>
     <entity name="Event" representedClassName="Event">
+        <attribute name="itemDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="itemQuantity" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="itemSerial" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeStamp" optional="YES" attributeType="Date">
             <userInfo/>
         </attribute>
@@ -21,8 +27,8 @@
         <relationship name="itemAsset" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AssetType" inverseName="itemAsset" inverseEntity="AssetType" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="58"/>
         <element name="AssetType" positionX="-180" positionY="-324" width="128" height="73"/>
+        <element name="Event" positionX="261" positionY="189" width="128" height="150"/>
         <element name="Item" positionX="-171" positionY="-9" width="128" height="163"/>
     </elements>
 </model>

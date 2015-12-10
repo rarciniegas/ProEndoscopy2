@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E85890F1C193EE600A4D93B /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E85890E1C193EE600A4D93B /* Event.m */; };
 		8E8DC9B61C1906F300243E17 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DC9B51C1906F300243E17 /* Item.m */; };
 		8E8DC9B91C1906F400243E17 /* AssetType.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DC9B81C1906F400243E17 /* AssetType.m */; };
 		8EE4ABCA1C18FEB7001FC31B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE4ABC91C18FEB7001FC31B /* main.m */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E85890D1C193EE600A4D93B /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		8E85890E1C193EE600A4D93B /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		8E8DC9B41C1906F300243E17 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		8E8DC9B51C1906F300243E17 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		8E8DC9B71C1906F400243E17 /* AssetType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetType.h; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 		8EE4ABBB1C18FEB7001FC31B = {
 			isa = PBXGroup;
 			children = (
+				8E85890D1C193EE600A4D93B /* Event.h */,
+				8E85890E1C193EE600A4D93B /* Event.m */,
 				8E8DC9B71C1906F400243E17 /* AssetType.h */,
 				8E8DC9B81C1906F400243E17 /* AssetType.m */,
 				8E8DC9B41C1906F300243E17 /* Item.h */,
@@ -241,6 +246,7 @@
 				8E8DC9B61C1906F300243E17 /* Item.m in Sources */,
 				8EE4ABD61C18FEB7001FC31B /* DetailViewController.m in Sources */,
 				8EE4ABD31C18FEB7001FC31B /* MasterViewController.m in Sources */,
+				8E85890F1C193EE600A4D93B /* Event.m in Sources */,
 				8EE4ABCD1C18FEB7001FC31B /* AppDelegate.m in Sources */,
 				8EE4ABD01C18FEB7001FC31B /* ProEndoscopy_2.xcdatamodeld in Sources */,
 				8EE4ABCA1C18FEB7001FC31B /* main.m in Sources */,
@@ -370,8 +376,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ProEndoscopy 2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -380,8 +388,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ProEndoscopy 2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
