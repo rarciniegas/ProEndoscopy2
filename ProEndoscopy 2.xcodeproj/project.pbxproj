@@ -30,8 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8E85890D1C193EE600A4D93B /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
-		8E85890E1C193EE600A4D93B /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		8E85890D1C193EE600A4D93B /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = ../Event.h; sourceTree = "<group>"; };
+		8E85890E1C193EE600A4D93B /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = ../Event.m; sourceTree = "<group>"; };
 		8EE4ABC41C18FEB7001FC31B /* ProEndoscopy 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ProEndoscopy 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE4ABC81C18FEB7001FC31B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EE4ABC91C18FEB7001FC31B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -71,8 +71,6 @@
 		8EE4ABBB1C18FEB7001FC31B = {
 			isa = PBXGroup;
 			children = (
-				8E85890D1C193EE600A4D93B /* Event.h */,
-				8E85890E1C193EE600A4D93B /* Event.m */,
 				8EE4ABC61C18FEB7001FC31B /* ProEndoscopy 2 */,
 				8EE4ABE61C18FEB7001FC31B /* ProEndoscopy 2Tests */,
 				8EE4ABC51C18FEB7001FC31B /* Products */,
@@ -91,6 +89,8 @@
 		8EE4ABC61C18FEB7001FC31B /* ProEndoscopy 2 */ = {
 			isa = PBXGroup;
 			children = (
+				8E85890D1C193EE600A4D93B /* Event.h */,
+				8E85890E1C193EE600A4D93B /* Event.m */,
 				8EE4ABCB1C18FEB7001FC31B /* AppDelegate.h */,
 				8EE4ABCC1C18FEB7001FC31B /* AppDelegate.m */,
 				8EE4ABD11C18FEB7001FC31B /* MasterViewController.h */,

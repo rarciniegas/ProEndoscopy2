@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "AppDelegate.h"
+#import "Event.h"
 
 @interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 

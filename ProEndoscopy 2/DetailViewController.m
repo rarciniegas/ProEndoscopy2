@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "MasterViewController.h"
 #import "Event.h"
 
 @interface DetailViewController ()  <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
+- (IBAction)saveItem:(id)sender;
 
 @end
 
@@ -41,6 +43,49 @@
 }
 
 #pragma mark - Mehtods
+
+-(IBAction)saveItem:(id)sender
+{
+    NSLog(@"%@",self.itemNameField.text);
+
+    NSLog(@"%@",self.serialTextField.text);
+    NSLog(@"%@",self.descriptionField.text);
+    NSLog(@"%@",self.quantityField.text);
+    NSLog(@"%@",self.priceField.text);
+
+    NSLog(@"Hello");
+    
+    NSFetchRequest * fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Event"];
+    fetchRequest.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"itemName" ascending:YES]];
+    
+    NSArray * arr = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    for(int i =0; i<arr.count; i ++){
+        Event * event = [arr objectAtIndex:i];
+        NSLog(@"eventName: %@", event.itemName);
+    }
+    
+    
+    Event * newEvent = [NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    
+    newEvent.itemName = self.itemNameField.text;
+    newEvent.itemDescription = self.descriptionField.text;
+    
+    [self.managedObjectContext save:nil];
+    
+    fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Event"];
+    fetchRequest.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"itemName" ascending:YES]];
+    
+    //self.pickerData = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+    
+    
+}
+
+-(NSManagedObjectContext *)managedObjectContext{
+    return [(AppDelegate *) [[UIApplication sharedApplication]delegate]managedObjectContext];
+}
+
+
 -(IBAction)takePicture:(id)sender
 {
     UIImagePickerController *imagePicker =[[UIImagePickerController alloc]init];
@@ -204,6 +249,7 @@ numberOfRowsInComponent:(NSInteger)component {
     [productTextField resignFirstResponder];
     [serialTextField resignFirstResponder];
 }
+
 
 
 @end

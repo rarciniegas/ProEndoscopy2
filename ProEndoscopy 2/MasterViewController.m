@@ -27,7 +27,9 @@
     //UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     //self.navigationItem.rightBarButtonItem = addButton;
 }
-
+-(void)viewDidAppear:(BOOL)animated{
+    [self.tableView reloadData];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -76,6 +78,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
+    
+    NSFetchRequest * fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Event"];
+    fetchRequest.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"itemName" ascending:YES]];
+    
+    NSArray * arr = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    
+    cell.textLabel.text = ((Event *)[arr objectAtIndex:indexPath.row]).itemName;
+    
     return cell;
 }
 
@@ -170,7 +180,6 @@
       newIndexPath:(NSIndexPath *)newIndexPath
 {
     UITableView *tableView = self.tableView;
-    
     switch(type) {
         case NSFetchedResultsChangeInsert:
             [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
